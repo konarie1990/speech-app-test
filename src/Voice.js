@@ -92,7 +92,7 @@ const Instance = props => {
   };
   return (
     <form action="#">
-      <legend>Text to Speech</legend>
+      <h2>Text to Speech</h2>
       <div>
         <select onChange={props.changeSelectedVoice.bind(this)}>
           <option value="null" disabled>
@@ -125,7 +125,7 @@ const Instance = props => {
           max="2"
           step="0.01"
           defaultValue={props.state.pitch}
-          tabindex="0"
+          tabIndex="0"
           onChange={props.changePitch.bind(this)}
           type="range"
         />
@@ -139,19 +139,17 @@ const Instance = props => {
           max="3.6"
           step="0.01"
           defaultValue={props.state.speed}
-          tabindex="0"
+          tabIndex="0"
           onChange={props.changeSpeed.bind(this)}
         />
       </div>
       <button
-        style={{ width: "100%" }}
         onClick={props.handleSpeak.bind(this)}
         disabled={props.state.formIsValid}
       >
         Speak
       </button>
       <button
-        style={{ width: "100%" }}
         onClick={props.cancelSpeak.bind(this)}
         disabled={props.state.formIsValid}
       >

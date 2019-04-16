@@ -11,6 +11,8 @@ class App extends Component {
         <Voice />
         <Voice />
         <Voice />
+        <Voice />
+        <Voice />
       </div>
     );
   }
