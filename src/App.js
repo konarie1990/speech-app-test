@@ -9,6 +9,8 @@ class App extends Component {
       <div className="App">
         <Voice />
         <Voice />
+        <Voice />
+        <Voice />
       </div>
     );
   }
