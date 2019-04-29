@@ -1,3 +1,21 @@
+#### FRONT END FOR Text to VocalFx
+
+This is a text to speech app that is controlled by a 16 step step-sequencer. It is used to create computer generated vocal melodies. The user can then record the audio into their digital audio workstation, hardware sampler or recording device. From there the user can further process the recording with audio tools.
+
+// import both Voice and Sequencer into App.js
+
+// map voice out to match the number of steps in Sequencer and create a new instance of Voice for each step in sequencer
+
+// Do I need to import voice.js into sequencer and map each voice to each step?
+
+// behavior should be to trigger speak on input and stop on output - move to next step in sequence
+
+// pass data from sequencer to voice to trigger voices in sequence
+
+// pass data from Sequencer.js to Voice.js to indicate voice step number
+
+// display text from voice input at top of screen
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

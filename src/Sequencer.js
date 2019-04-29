@@ -3,6 +3,8 @@ import ReactDOM from "react-dom";
 import { withSequencer } from "react-sequencer";
 import styled from "styled-components";
 
+// Add tempo control
+
 const Steps = styled.div`
   display: flex;
 `;
@@ -38,7 +40,7 @@ class SequencerExample extends React.PureComponent {
   render() {
     const { sequencer } = this.props;
     const steps = Array.apply(null, Array(8));
-    console.log(sequencer);
+    console.log(sequencer.current);
 
     return (
       <div>
