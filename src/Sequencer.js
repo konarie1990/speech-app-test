@@ -12,7 +12,7 @@ const SeqStep = styled.div`
   align-items: center;
   justify-content: center;
   color: ${props => (props.highlight ? "#FFF" : "auto")};
-  background: ${props => (props.highlight ? "blue" : "auto")};
+  background: ${props => (props.highlight ? "tomato" : "auto")};
   transform: ${props => (props.highlight ? "scale(1.2)" : "scale(1)")};
   transition: background 0.2s linear, color 0.2s linear, transform 0.2s linear;
   width: 40px;
@@ -22,23 +22,23 @@ const SeqStep = styled.div`
 `;
 
 class SequencerExample extends React.PureComponent {
-  constructor(props) {
-    super(props);
-    this.state = {
-      in: true
-    };
-  }
+  state = {
+    in: false,
+    out: true
+  };
+
   handleStart = () => {
     this.props.sequencer.play();
   };
 
   handleStop = () => {
-    this.props.sequencer.pause();
+    this.props.sequencer.stop();
   };
 
   render() {
     const { sequencer } = this.props;
     const steps = Array.apply(null, Array(8));
+    console.log(sequencer);
 
     return (
       <div>
@@ -53,7 +53,7 @@ class SequencerExample extends React.PureComponent {
         <button
           onClick={sequencer.isPlaying ? this.handleStop : this.handleStart}
         >
-          {sequencer.isPlaying ? "Pause" : "Start"}
+          {sequencer.isPlaying ? "Stop" : "Start"}
         </button>
       </div>
     );
