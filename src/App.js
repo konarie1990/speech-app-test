@@ -1,8 +1,7 @@
 import React, { Component } from "react";
-import Voice from "./Voice";
 
 import "./App.css";
-import SequencerExample from "./Sequencer";
+import SequencerExample from "./SequencerContainer";
 
 // import both Voice and Sequencer
 // map voice out to match the number of steps in Sequencer and create a new instance of Voice for each step in sequencer
@@ -20,8 +19,6 @@ class App extends Component {
     return (
       <div className="App">
         <SequencerExample />
-
-        <Voice />
       </div>
     );
   }

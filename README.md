@@ -10,11 +10,21 @@ This is a text to speech app that is controlled by a 16 step step-sequencer. It 
 
 // behavior should be to trigger speak on input and stop on output - move to next step in sequence
 
+// should be able to adjust tempo
+
 // pass data from sequencer to voice to trigger voices in sequence
 
 // pass data from Sequencer.js to Voice.js to indicate voice step number
 
 // display text from voice input at top of screen
+
+// make step length adjustable - refer to sequencer.js for sequence length
+
+###
+
+// bug fixes
+
+// Warning: Use the `defaultValue` or `value` props on <select> instead of setting `selected` on <option>.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
