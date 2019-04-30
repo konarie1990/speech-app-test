@@ -20,11 +20,22 @@ This is a text to speech app that is controlled by a 16 step step-sequencer. It 
 
 // make step length adjustable - refer to sequencer.js for sequence length
 
+// how do i send sequencer.current to state.js? and if that is possible how to I grab the state and pass it as an argument to a function (handleSpeak)?
+
 ###
 
 // bug fixes
 
 // Warning: Use the `defaultValue` or `value` props on <select> instead of setting `selected` on <option>.
+
+###
+
+// add ons
+
+// user profile
+// save/recall multiple settings
+// export audio
+// audio fx (delay, reverb, bitcrush, etc)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

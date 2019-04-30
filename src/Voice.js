@@ -8,7 +8,7 @@ class Voice extends Component {
   };
   state = {
     language: "en-US",
-    message: "",
+    message: "da da da",
     selectedVoice: 0,
     pitch: 1,
     speed: 1,
@@ -22,15 +22,13 @@ class Voice extends Component {
     });
   };
 
+  changeMessage = e => {
+    this.setState({ message: e.target.value });
+  };
+
   changeSelectedVoice = e => {
     this.setState({
       selectedVoice: parseInt(e.target.value)
-    });
-  };
-
-  changeSpeed = e => {
-    this.setState({
-      speed: parseFloat(e.target.value)
     });
   };
 
@@ -40,8 +38,10 @@ class Voice extends Component {
     });
   };
 
-  changeMessage = e => {
-    this.setState({ message: e.target.value });
+  changeSpeed = e => {
+    this.setState({
+      speed: parseFloat(e.target.value)
+    });
   };
 
   handleSpeak = e => {
@@ -84,7 +84,7 @@ const Instance = props => {
   const getVoiceOption = (voice, i) => {
     let selected = props.state.selectedVoice === i ? "selected" : "";
     return (
-      <option key={i} value={i} selected={selected}>
+      <option key={i} value={i} defaultValue={selected}>
         {" "}
         {voice.name} - {voice.lang}
       </option>
@@ -92,7 +92,7 @@ const Instance = props => {
   };
   return (
     <form action="#">
-      <h2>Text to Speech</h2>
+      <h2>Voice</h2>
       <div>
         <select onChange={props.changeSelectedVoice.bind(this)}>
           <option value="null" disabled>
@@ -118,7 +118,7 @@ const Instance = props => {
       </div>
 
       <div>
-        <label for="pitchChange">Pitch {props.state.pitch}</label>
+        <label htmlFor="pitchChange">Pitch {props.state.pitch}</label>
         <input
           id="pitchChange"
           min="0"
@@ -145,6 +145,7 @@ const Instance = props => {
       </div>
       <button
         onClick={props.handleSpeak.bind(this)}
+        handleSpeak={props.handleSpeak}
         disabled={props.state.formIsValid}
       >
         Speak

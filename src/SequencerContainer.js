@@ -3,6 +3,7 @@ import VoiceSequencer from "./Sequencer";
 import { setSteps } from "./actions";
 
 const mapStateToProps = state => {
+  console.log(state);
   return { steps: state.steps };
 };
 
